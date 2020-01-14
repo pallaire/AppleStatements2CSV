@@ -1,0 +1,11 @@
+#Python
+*.py[cod]
+
+#VIM
+*.swp
+
+#Project
+*.pdf
+*.csv
+*.txt
+
