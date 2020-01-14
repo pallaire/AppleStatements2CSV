@@ -60,6 +60,9 @@ def parseInputText(filename):
 		if len(aline) <= 11:
 			continue
 
+		if aline[0] == '#':
+			continue
+
 		rdate = parse_date(aline[:10])
 		if rdate != None:
 			rdate = aline[:10]
@@ -98,6 +101,7 @@ if __name__ == "__main__":
 	if len(sys.argv) <= 1: 
 		print("AppleStatementsToCSV.py inputfile")
 		print("  Cut and Paste from Adobe Acrobat Reader all transaction into a text file")
+		print("  Format example : 11/30/2019 WALGREENS #5006 4070 S EL CAMINO REAL SAN MATEO 94403 CA USA 2% $0.32 $15.96")
 		sys.exit(-1)
 	
 	for i in range(1, len(sys.argv)):
